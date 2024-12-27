@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "autogen-ext-mcp"
+version = "0.1.0"
+description = "MCP Tools extension for AutoGen >= v0.4"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "autogen-core==0.4.0.dev11",
+    "json-schema-to-pydantic>=0.1.0",
+    "mcp>=1.1.2",
+]
+
+[project.optional-dependencies]
+samples = [
+    "autogen-agentchat==0.4.0.dev11",
+    "autogen-ext[openai]==0.4.0.dev11",
+    "rich>=13.9.4",
+    "python-dotenv>=1.0.1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/autogen_ext_mcp"]
