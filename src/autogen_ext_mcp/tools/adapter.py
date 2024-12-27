@@ -70,6 +70,10 @@ class MCPToolAdapter(BaseTool[BaseModel, Any]):
                         raise Exception("Operation cancelled")
 
                     result = await session.call_tool(self._tool.name, kwargs)
-                    return result
+
+                    if result.isError:
+                        raise Exception(f"MCP tool execution failed: {result.content}")
+
+                    return result.content
         except Exception as e:
             raise Exception(f"MCP tool execution failed: {str(e)}") from e

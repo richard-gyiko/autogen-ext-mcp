@@ -191,29 +191,23 @@ dependencies = [
 ]
 
 [package.optional-dependencies]
-dev = [
+samples = [
     { name = "autogen-agentchat" },
     { name = "autogen-ext", extra = ["openai"] },
-    { name = "rich" },
-]
-
-[package.dev-dependencies]
-dev = [
     { name = "python-dotenv" },
+    { name = "rich" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "autogen-agentchat", marker = "extra == 'dev'", specifier = "==0.4.0.dev11" },
+    { name = "autogen-agentchat", marker = "extra == 'samples'", specifier = "==0.4.0.dev11" },
     { name = "autogen-core", specifier = "==0.4.0.dev11" },
-    { name = "autogen-ext", extras = ["openai"], marker = "extra == 'dev'", specifier = "==0.4.0.dev11" },
+    { name = "autogen-ext", extras = ["openai"], marker = "extra == 'samples'", specifier = "==0.4.0.dev11" },
     { name = "json-schema-to-pydantic", specifier = ">=0.1.0" },
     { name = "mcp", specifier = ">=1.1.2" },
-    { name = "rich", marker = "extra == 'dev'", specifier = ">=13.9.4" },
+    { name = "python-dotenv", marker = "extra == 'samples'", specifier = ">=1.0.1" },
+    { name = "rich", marker = "extra == 'samples'", specifier = ">=13.9.4" },
 ]
-
-[package.metadata.requires-dev]
-dev = [{ name = "python-dotenv", specifier = ">=1.0.1" }]
 
 [[package]]
 name = "certifi"

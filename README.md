@@ -1,6 +1,8 @@
 # AutoGen Extension for MCP Tools
 
-This package provides integration between [Microsoft AutoGen](https://microsoft.github.io/autogen/) and [MCP (Multi-Agent Cooperation Protocol)](https://github.com/microsoft/mcp) tools, enabling AutoGen agents to use MCP-based tools in their workflows.
+This package provides integration between [Microsoft AutoGen](https://microsoft.github.io/autogen/) and the [Model Context Protocol (MCP)](https://modelcontextprotocol.io), enabling AutoGen agents to seamlessly connect with various data sources and tools.
+
+MCP is an open standard that enables secure, two-way connections between AI systems and data sources, replacing fragmented integrations with a single universal protocol. This allows AI assistants to maintain context as they move between different tools and datasets.
 
 ## Installation
 
@@ -16,9 +18,8 @@ pip install "autogen-ext-mcp[samples]"
 ## Features
 
 - Seamless integration of MCP tools with AutoGen agents
+- Connect to any MCP-compatible data source or tool
 - Automatic conversion of MCP tool schemas to AutoGen-compatible formats
-- Support for async tool execution
-- Built-in cancellation support
 
 ## Quick Start
 
@@ -38,6 +39,12 @@ tools = await get_tools_from_mcp_server(server_params)
 # Use tools with AutoGen agents
 # The tools can be passed to any AutoGen agent that supports tool use
 ```
+
+## Resources
+
+- [Model Context Protocol Documentation](https://modelcontextprotocol.io)
+- [MCP Quickstart Guide](https://modelcontextprotocol.io/quickstart)
+- [Pre-built MCP Servers](https://github.com/modelcontextprotocol/servers)
 
 ## Requirements
 
