@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "autogen-ext-mcp"
 version = "0.1.0"
-description = "MCP Tools extension for AutoGen"
+description = "MCP Tools extension for AutoGen >= v0.4"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
