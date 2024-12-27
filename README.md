@@ -10,11 +10,6 @@ MCP is an open standard that enables secure, two-way connections between AI syst
 pip install autogen-ext-mcp
 ```
 
-To run the samples, install with the samples extras:
-```bash
-pip install "autogen-ext-mcp[samples]"
-```
-
 ## Features
 
 - Seamless integration of MCP tools with AutoGen agents
