@@ -38,13 +38,13 @@ class MCPToolAdapter(BaseTool[BaseModel, Any]):
                 f"Invalid input schema for tool {name}: expected dictionary, got {type(tool.inputSchema)}"
             )
 
-        # Create the model using the configured base
-        args_type = create_model(tool.inputSchema)
+        # Create the input model from the tool's schema
+        input_model = create_model(tool.inputSchema)
 
         # Use Any as return type since MCP tool returns can vary
         return_type: Type[Any] = object
 
-        super().__init__(args_type, return_type, name, description)
+        super().__init__(input_model, return_type, name, description)
 
     async def run(self, args: BaseModel, cancellation_token: CancellationToken) -> Any:
         """Execute the MCP tool with the given arguments.
@@ -76,4 +76,4 @@ class MCPToolAdapter(BaseTool[BaseModel, Any]):
 
                     return result.content
         except Exception as e:
-            raise Exception(f"MCP tool execution failed: {str(e)}") from e
+            raise Exception(str(e)) from e

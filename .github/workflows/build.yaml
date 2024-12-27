@@ -3,8 +3,8 @@ name: Build
 on: [pull_request]
 
 jobs:
-  uv-example:
-    name: python
+  build-and-lint:
+    name: Build and Lint
     runs-on: ubuntu-latest
 
     steps:
