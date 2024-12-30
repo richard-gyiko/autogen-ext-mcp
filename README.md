@@ -1,5 +1,7 @@
 # AutoGen Extension for MCP Tools
 
+![PyPI - Version](https://img.shields.io/pypi/v/autogen-ext-mcp)
+
 This package provides integration between [Microsoft AutoGen](https://microsoft.github.io/autogen/) and the [Model Context Protocol (MCP)](https://modelcontextprotocol.io), enabling AutoGen agents to seamlessly connect with various data sources and tools.
 
 MCP is an open standard that enables secure, two-way connections between AI systems and data sources, replacing fragmented integrations with a single universal protocol. This allows AI assistants to maintain context as they move between different tools and datasets.
@@ -15,16 +17,6 @@ pip install autogen-ext-mcp
 - Seamless integration of MCP tools with AutoGen agents
 - Connect to any MCP-compatible data source or tool
 - Automatic conversion of MCP tool schemas to AutoGen-compatible formats
-
-## Prerequisites
-
-Before running the samples, you need to install the FileSystem MCP server:
-
-```bash
-npm install -g @modelcontextprotocol/server-filesystem
-```
-
-This server provides filesystem operations like reading/writing files, creating directories, etc. See the [FileSystem MCP Server documentation](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) for more details.
 
 ## Quick Start
 
