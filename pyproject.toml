@@ -25,7 +25,7 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
     "Typing :: Typed",
 ]
-urls.Homepage = "https://github.com/richard-gyiko/autogen-ext-mcp"
+urls.homepage = "https://github.com/richard-gyiko/autogen-ext-mcp"
 urls.Documentation = "https://github.com/richard-gyiko/autogen-ext-mcp#readme"
 urls.Repository = "https://github.com/richard-gyiko/autogen-ext-mcp.git"
 urls.Bug-Tracker = "https://github.com/richard-gyiko/autogen-ext-mcp/issues"
