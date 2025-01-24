@@ -35,6 +35,11 @@ dependencies = [
     "mcp>=1.1.2",
 ]
 
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+]
+
 [project.optional-dependencies]
 samples = [
     "autogen-agentchat>=0.4.2,<0.5",
