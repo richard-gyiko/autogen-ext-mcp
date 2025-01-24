@@ -56,16 +56,6 @@ Check out the [samples directory](samples/) for example code and detailed instru
 - [MCP Quickstart Guide](https://modelcontextprotocol.io/quickstart)
 - [Pre-built MCP Servers](https://github.com/modelcontextprotocol/servers)
 
-## Requirements
-
-- Python >=3.12
-- AutoGen >=0.4.0
-- mcp >=1.1.2
-
-## License
-
-MIT License
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
