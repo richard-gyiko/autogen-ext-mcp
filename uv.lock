@@ -5,15 +5,6 @@ requires-python = ">=3.10"
 prerelease-mode = "allow"
 
 [[package]]
-name = "aioconsole"
-version = "0.8.1"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/c7/c9/c57e979eea211b10a63783882a826f257713fa7c0d6c9a6eac851e674fb4/aioconsole-0.8.1.tar.gz", hash = "sha256:0535ce743ba468fb21a1ba43c9563032c779534d4ecd923a46dbd350ad91d234", size = 61085 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/fa/ea/23e756ec1fea0c685149304dda954b3b3932d6d06afbf42a66a2e6dc2184/aioconsole-0.8.1-py3-none-any.whl", hash = "sha256:e1023685cde35dde909fbf00631ffb2ed1c67fe0b7058ebb0892afbde5f213e5", size = 43324 },
-]
-
-[[package]]
 name = "aiofiles"
 version = "24.1.0"
 source = { registry = "https://pypi.org/simple" }
@@ -48,20 +39,19 @@ wheels = [
 
 [[package]]
 name = "autogen-agentchat"
-version = "0.4.0"
+version = "0.4.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "aioconsole" },
     { name = "autogen-core" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ea/89/f8bbf0d800a0d3ee2c0bf2f8cb363c6646d8a79e340bf750c99d6adf5340/autogen_agentchat-0.4.0.tar.gz", hash = "sha256:2442c1c3ef869f9029918562fd9a69964776e2bf43a7fbd6ee50145f0f61e897", size = 49425 }
+sdist = { url = "https://files.pythonhosted.org/packages/82/80/d4615c8e19c43e1a37a26c5e5c14adc77f2d5b791c04e525721983c94a2c/autogen_agentchat-0.4.3.tar.gz", hash = "sha256:28b77cca6f2c6f21319c0f7e8c07d0559c89d9899d00379d1b0b405ab7c8e5ea", size = 56419 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/24/34/c0d795703a9d01ca85a36e2d3d8e724a812be97d9a11d4e41b043819a2d6/autogen_agentchat-0.4.0-py3-none-any.whl", hash = "sha256:ad292f804b363844ce8cc1b4d10092eaea1a2fcd6fbdfece3a1eabf1843681d6", size = 57128 },
+    { url = "https://files.pythonhosted.org/packages/3c/f8/ae620de6658e1a3340dcdd6434c6b98681bd859ed14f7bf38663aec1c360/autogen_agentchat-0.4.3-py3-none-any.whl", hash = "sha256:b3067678682c74eac09fd23a911e8ac76a94d7435cb529f6aeae3a928f2239eb", size = 61276 },
 ]
 
 [[package]]
 name = "autogen-core"
-version = "0.4.0"
+version = "0.4.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jsonref" },
@@ -71,21 +61,21 @@ dependencies = [
     { name = "pydantic" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/9d/1f/737b6df5c4cddff9f71e2973ccb49da8252162f819af399bb6989264a698/autogen_core-0.4.0.tar.gz", hash = "sha256:1921294298aefa571a216ce6c5c35705dd46b67d8ba316b04385694e2e56a14e", size = 2286746 }
+sdist = { url = "https://files.pythonhosted.org/packages/68/39/449937a545ffce7a82a8d96a90204c936e0446b4cb1ada64362e7909aabf/autogen_core-0.4.3.tar.gz", hash = "sha256:39b889fdb03f58d1d656ac8aca8b80d28d447b2a505f77fd2ce27b932b02aa85", size = 2304186 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d3/a6/70ba240264918d905b5748b165f2164e4b9453b4aa618648d2106cc8e400/autogen_core-0.4.0-py3-none-any.whl", hash = "sha256:9c8646beaab8ab3a8b9fd7e0cf472222772b04327f7d98328ada0b5ee71f9c61", size = 71327 },
+    { url = "https://files.pythonhosted.org/packages/94/e0/4e2bae4870b0c72416ce01e39cbb6845f7c9085f78d0817776490e21000a/autogen_core-0.4.3-py3-none-any.whl", hash = "sha256:ffff153f42bd96ab99fac2ec7b00939e39a45e334e4653b04b1039f2d6b3b4e4", size = 76433 },
 ]
 
 [[package]]
 name = "autogen-ext"
-version = "0.4.0"
+version = "0.4.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "autogen-core" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/9d/c1/c228fa9e23b1fdec710babc86f413413256892c7807b35fb09a4cb5ae535/autogen_ext-0.4.0.tar.gz", hash = "sha256:3ad871f540c0d155d7e717846835b49357b1cf0ae986309a4a7d4ead14f3a37c", size = 102759 }
+sdist = { url = "https://files.pythonhosted.org/packages/51/b5/8ffe1c6c458913a1d5bf1394429181e77fa755c8fb05f41d5f710952bf19/autogen_ext-0.4.3.tar.gz", hash = "sha256:a32c1646fccdd5d3f2a81c961cbf18f0e795dc9b9c4c9ecfbf659a83d5c49896", size = 134666 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c1/79/f75676363ba3c08a0fa2df7e1248d00a140df866fe35b6dbb1744b76cab4/autogen_ext-0.4.0-py3-none-any.whl", hash = "sha256:965c6c5c3345bfce6f1f396f6b9770bc308ca03e23fb8c91b4572f0c8f01a222", size = 110809 },
+    { url = "https://files.pythonhosted.org/packages/04/68/402b9f634a1b2d83c68093a795521b8f9038d377d76a374b14e13179bfde/autogen_ext-0.4.3-py3-none-any.whl", hash = "sha256:a96546dfb055c137d6ab10b8ae1764d7037c5a7c1f6aa44b4b0ccf926d566229", size = 133775 },
 ]
 
 [package.optional-dependencies]
@@ -101,7 +91,7 @@ openai = [
 
 [[package]]
 name = "autogen-ext-mcp"
-version = "0.2.0"
+version = "0.2.1"
 source = { editable = "." }
 dependencies = [
     { name = "autogen-core" },
@@ -119,9 +109,9 @@ samples = [
 
 [package.metadata]
 requires-dist = [
-    { name = "autogen-agentchat", marker = "extra == 'samples'", specifier = ">=0.4.0,<0.5" },
-    { name = "autogen-core", specifier = ">=0.4.0,<0.5" },
-    { name = "autogen-ext", extras = ["azure", "openai"], marker = "extra == 'samples'", specifier = ">=0.4.0,<0.5" },
+    { name = "autogen-agentchat", marker = "extra == 'samples'", specifier = ">=0.4.2,<0.5" },
+    { name = "autogen-core", specifier = ">=0.4.2,<0.5" },
+    { name = "autogen-ext", extras = ["azure", "openai"], marker = "extra == 'samples'", specifier = ">=0.4.2,<0.5" },
     { name = "json-schema-to-pydantic", specifier = ">=0.2.0" },
     { name = "mcp", specifier = ">=1.1.2" },
     { name = "python-dotenv", marker = "extra == 'samples'", specifier = ">=1.0.1" },
