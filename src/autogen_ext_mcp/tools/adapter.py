@@ -1,12 +1,24 @@
 from typing import Any, Type
-from autogen_core import CancellationToken
+
+from autogen_core import CancellationToken, Component, ComponentBase
 from autogen_core.tools import BaseTool
 from json_schema_to_pydantic import create_model
-from mcp import ClientSession, StdioServerParameters, stdio_client, Tool
+from mcp import ClientSession, StdioServerParameters, Tool, stdio_client
 from pydantic import BaseModel
 
 
-class MCPToolAdapter(BaseTool[BaseModel, Any]):
+class MCPToolAdapterConfig(BaseModel):
+    """Configuration for the MCP tool adapter."""
+
+    server_params: StdioServerParameters
+    tool: Tool
+
+
+class MCPToolAdapter(
+    BaseTool[BaseModel, Any],
+    ComponentBase[MCPToolAdapterConfig],
+    Component[MCPToolAdapterConfig],
+):
     """Adapter for MCP tools to make them compatible with AutoGen.
 
     Args:
@@ -14,29 +26,16 @@ class MCPToolAdapter(BaseTool[BaseModel, Any]):
         tool (Tool): The MCP tool to wrap
     """
 
-    def __init__(self, server_params: StdioServerParameters, tool: Tool) -> None:
-        if not isinstance(server_params, StdioServerParameters):
-            raise ValueError(
-                "server_params must be an instance of StdioServerParameters"
-            )
-        if not isinstance(tool, Tool):
-            raise ValueError("tool must be an instance of Tool")
+    component_type = "tool"
+    component_config_schema = MCPToolAdapterConfig
 
+    def __init__(self, server_params: StdioServerParameters, tool: Tool) -> None:
         self._tool = tool
-        self.server_params = server_params
+        self._server_params = server_params
 
         # Extract name and description
         name = tool.name
         description = tool.description or ""
-
-        # Validate and extract schema information with detailed errors
-        if tool.inputSchema is None:
-            raise ValueError(f"Tool {name} has no input schema defined")
-
-        if not isinstance(tool.inputSchema, dict):
-            raise ValueError(
-                f"Invalid input schema for tool {name}: expected dictionary, got {type(tool.inputSchema)}"
-            )
 
         # Create the input model from the tool's schema
         input_model = create_model(tool.inputSchema)
@@ -62,7 +61,7 @@ class MCPToolAdapter(BaseTool[BaseModel, Any]):
         kwargs = args.model_dump()
 
         try:
-            async with stdio_client(self.server_params) as (read, write):
+            async with stdio_client(self._server_params) as (read, write):
                 async with ClientSession(read, write) as session:
                     await session.initialize()
 
@@ -77,3 +76,10 @@ class MCPToolAdapter(BaseTool[BaseModel, Any]):
                     return result.content
         except Exception as e:
             raise Exception(str(e)) from e
+
+    def _to_config(self) -> MCPToolAdapterConfig:
+        return MCPToolAdapterConfig(server_params=self._server_params, tool=self._tool)
+
+    @classmethod
+    def _from_config(cls, config: MCPToolAdapterConfig) -> "MCPToolAdapter":
+        return cls(server_params=config.server_params, tool=config.tool)

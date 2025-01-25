@@ -6,10 +6,11 @@ from autogen_agentchat.agents import AssistantAgent
 from autogen_agentchat.ui import Console
 from autogen_core import CancellationToken
 from autogen_ext.models.openai import OpenAIChatCompletionClient
-from autogen_ext_mcp.tools import get_tools_from_mcp_server, MCPToolAdapter
-from mcp import StdioServerParameters
 from dotenv import load_dotenv
+from mcp import StdioServerParameters
 from rich.console import Console as RichConsole
+
+from autogen_ext_mcp.tools import MCPToolAdapter, get_tools_from_mcp_server
 
 # Get desktop path cross-platform
 desktop_path = str(Path.home() / "Desktop")
@@ -30,20 +31,22 @@ def print_tools(tools: List[MCPToolAdapter]) -> None:
 
     for tool in tools:
         console.print(f"\n[bold green]🔧 {tool.schema['name']}[/bold green]")
-        if 'description' in tool.schema:
+        if "description" in tool.schema:
             console.print(f"[italic]{tool.schema['description']}[/italic]")
-        
-        if 'parameters' in tool.schema:
+
+        if "parameters" in tool.schema:
             console.print("\n[yellow]Parameters:[/yellow]")
-            params = tool.schema['parameters']
-            if 'properties' in params:
-                for prop_name, prop_details in params['properties'].items():
-                    required = prop_name in params.get('required', [])
+            params = tool.schema["parameters"]
+            if "properties" in params:
+                for prop_name, prop_details in params["properties"].items():
+                    required = prop_name in params.get("required", [])
                     required_mark = "[red]*[/red]" if required else ""
-                    console.print(f"  • [cyan]{prop_name}{required_mark}[/cyan]: {prop_details.get('type', 'any')}")
-                    if 'description' in prop_details:
+                    console.print(
+                        f"  • [cyan]{prop_name}{required_mark}[/cyan]: {prop_details.get('type', 'any')}"
+                    )
+                    if "description" in prop_details:
                         console.print(f"    [dim]{prop_details['description']}[/dim]")
-        
+
         console.print("─" * 50)
 
 
