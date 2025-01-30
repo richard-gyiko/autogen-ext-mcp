@@ -39,19 +39,19 @@ wheels = [
 
 [[package]]
 name = "autogen-agentchat"
-version = "0.4.3"
+version = "0.4.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "autogen-core" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/82/80/d4615c8e19c43e1a37a26c5e5c14adc77f2d5b791c04e525721983c94a2c/autogen_agentchat-0.4.3.tar.gz", hash = "sha256:28b77cca6f2c6f21319c0f7e8c07d0559c89d9899d00379d1b0b405ab7c8e5ea", size = 56419 }
+sdist = { url = "https://files.pythonhosted.org/packages/ed/50/065e357b08e4594ec949343e8e5b74ecca557e480c3072d4555569f3b517/autogen_agentchat-0.4.4.tar.gz", hash = "sha256:bb4a636707a5fd91950685b68f28019bdc9f64a101cd87109715dd212d295106", size = 58173 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/3c/f8/ae620de6658e1a3340dcdd6434c6b98681bd859ed14f7bf38663aec1c360/autogen_agentchat-0.4.3-py3-none-any.whl", hash = "sha256:b3067678682c74eac09fd23a911e8ac76a94d7435cb529f6aeae3a928f2239eb", size = 61276 },
+    { url = "https://files.pythonhosted.org/packages/f9/fd/7fade5f943a8c5094130f9aefd72a18818d1862d85078ec0d9ac62b0b51a/autogen_agentchat-0.4.4-py3-none-any.whl", hash = "sha256:c10e6e5a867403b8cc37c9f733e6f8a9b4f32e399808bdb1720bc00274b5e516", size = 63016 },
 ]
 
 [[package]]
 name = "autogen-core"
-version = "0.4.3"
+version = "0.4.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jsonref" },
@@ -61,25 +61,26 @@ dependencies = [
     { name = "pydantic" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/68/39/449937a545ffce7a82a8d96a90204c936e0446b4cb1ada64362e7909aabf/autogen_core-0.4.3.tar.gz", hash = "sha256:39b889fdb03f58d1d656ac8aca8b80d28d447b2a505f77fd2ce27b932b02aa85", size = 2304186 }
+sdist = { url = "https://files.pythonhosted.org/packages/1a/f5/de81486709bf04d89e4824a4b755e66c53d6d572e802514731f23314f319/autogen_core-0.4.4.tar.gz", hash = "sha256:053a17bbf7fb345bbe1249f0f7181f6a6b15f2dfa47b8ce69910b8001ff96156", size = 2310980 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/94/e0/4e2bae4870b0c72416ce01e39cbb6845f7c9085f78d0817776490e21000a/autogen_core-0.4.3-py3-none-any.whl", hash = "sha256:ffff153f42bd96ab99fac2ec7b00939e39a45e334e4653b04b1039f2d6b3b4e4", size = 76433 },
+    { url = "https://files.pythonhosted.org/packages/4e/2f/f8dcd48ccb99f92252987d20c86e51e58eaed6bcfb1cf727b9bdfa51b1bc/autogen_core-0.4.4-py3-none-any.whl", hash = "sha256:2e891b20817b90e847c0f580d9ccd1cb1f682bdb2830d3b7d9425bd6966f6d28", size = 78245 },
 ]
 
 [[package]]
 name = "autogen-ext"
-version = "0.4.3"
+version = "0.4.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "autogen-core" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/51/b5/8ffe1c6c458913a1d5bf1394429181e77fa755c8fb05f41d5f710952bf19/autogen_ext-0.4.3.tar.gz", hash = "sha256:a32c1646fccdd5d3f2a81c961cbf18f0e795dc9b9c4c9ecfbf659a83d5c49896", size = 134666 }
+sdist = { url = "https://files.pythonhosted.org/packages/10/4a/9ff4b65c773cc086f2b81cbff44161ff7f976fa235a2ec63470869cd1526/autogen_ext-0.4.4.tar.gz", hash = "sha256:116ece3a75af48f194da3a482b7f546e252d398dfaa133c62145d24a88fb8ac0", size = 140011 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/04/68/402b9f634a1b2d83c68093a795521b8f9038d377d76a374b14e13179bfde/autogen_ext-0.4.3-py3-none-any.whl", hash = "sha256:a96546dfb055c137d6ab10b8ae1764d7037c5a7c1f6aa44b4b0ccf926d566229", size = 133775 },
+    { url = "https://files.pythonhosted.org/packages/07/b4/cda27ed34a8be22d9c082f1b1b41ca5f4695b6b6462419ffffe50b23f086/autogen_ext-0.4.4-py3-none-any.whl", hash = "sha256:f994006ee34473524cd3ff9017c558d55a6610013d1e5d3a8f7ac90e15fb12df", size = 143012 },
 ]
 
 [package.optional-dependencies]
 azure = [
+    { name = "azure-ai-inference" },
     { name = "azure-core" },
     { name = "azure-identity" },
 ]
@@ -110,13 +111,14 @@ samples = [
 [package.dev-dependencies]
 dev = [
     { name = "pytest" },
+    { name = "pytest-asyncio" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "autogen-agentchat", marker = "extra == 'samples'", specifier = ">=0.4.2,<0.5" },
-    { name = "autogen-core", specifier = ">=0.4.2,<0.5" },
-    { name = "autogen-ext", extras = ["azure", "openai"], marker = "extra == 'samples'", specifier = ">=0.4.2,<0.5" },
+    { name = "autogen-agentchat", marker = "extra == 'samples'", specifier = ">=0.4.4,<0.5" },
+    { name = "autogen-core", specifier = ">=0.4.4,<0.5" },
+    { name = "autogen-ext", extras = ["azure", "openai"], marker = "extra == 'samples'", specifier = ">=0.4.4,<0.5" },
     { name = "json-schema-to-pydantic", specifier = ">=0.2.0" },
     { name = "mcp", specifier = ">=1.1.2" },
     { name = "python-dotenv", marker = "extra == 'samples'", specifier = ">=1.0.1" },
@@ -124,7 +126,24 @@ requires-dist = [
 ]
 
 [package.metadata.requires-dev]
-dev = [{ name = "pytest", specifier = ">=8.3.4" }]
+dev = [
+    { name = "pytest", specifier = ">=8.3.4" },
+    { name = "pytest-asyncio", specifier = ">=0.25.3" },
+]
+
+[[package]]
+name = "azure-ai-inference"
+version = "1.0.0b7"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "azure-core" },
+    { name = "isodate" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/af/37/233eee0bebbf631d2f911a9f1ebbc3784b100d9bfb84efc275e71c1ea636/azure_ai_inference-1.0.0b7.tar.gz", hash = "sha256:bd912f71f7f855036ca46c9a21439f290eed5e61da418fd26bbb32e3c68bcce3", size = 175883 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/cd/b6/5ba830eddc59f820c654694d476c14a3dd9c1f828ff9b48eb8b21dfd5f01/azure_ai_inference-1.0.0b7-py3-none-any.whl", hash = "sha256:59bb6a9ee62bd7654a69ca2bf12fe9335d7045df95b491cb8b5f9e3791c86175", size = 123030 },
+]
 
 [[package]]
 name = "azure-core"
@@ -467,6 +486,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/d7/4b/cbd8e699e64a6f16ca3a8220661b5f83792b3017d0f79807cb8708d33913/iniconfig-2.0.0.tar.gz", hash = "sha256:2d91e135bf72d31a410b17c16da610a82cb55f6b0477d1a902134b24a455b8b3", size = 4646 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
+]
+
+[[package]]
+name = "isodate"
+version = "0.7.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/54/4d/e940025e2ce31a8ce1202635910747e5a87cc3a6a6bb2d00973375014749/isodate-0.7.2.tar.gz", hash = "sha256:4cd1aa0f43ca76f4a6c6c0292a85f40b35ec2e43e315b59f06e6d32171a953e6", size = 29705 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/15/aa/0aca39a37d3c7eb941ba736ede56d689e7be91cab5d9ca846bde3999eba6/isodate-0.7.2-py3-none-any.whl", hash = "sha256:28009937d8031054830160fce6d409ed342816b543597cece116d966c6d99e15", size = 22320 },
 ]
 
 [[package]]
@@ -913,6 +941,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/05/35/30e0d83068951d90a01852cb1cef56e5d8a09d20c7f511634cc2f7e0372a/pytest-8.3.4.tar.gz", hash = "sha256:965370d062bce11e73868e0335abac31b4d3de0e82f4007408d242b4f8610761", size = 1445919 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/11/92/76a1c94d3afee238333bc0a42b82935dd8f9cf8ce9e336ff87ee14d9e1cf/pytest-8.3.4-py3-none-any.whl", hash = "sha256:50e16d954148559c9a74109af1eaf0c945ba2d8f30f0a3d3335edde19788b6f6", size = 343083 },
+]
+
+[[package]]
+name = "pytest-asyncio"
+version = "0.25.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pytest" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/f2/a8/ecbc8ede70921dd2f544ab1cadd3ff3bf842af27f87bbdea774c7baa1d38/pytest_asyncio-0.25.3.tar.gz", hash = "sha256:fc1da2cf9f125ada7e710b4ddad05518d4cee187ae9412e9ac9271003497f07a", size = 54239 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/67/17/3493c5624e48fd97156ebaec380dcaafee9506d7e2c46218ceebbb57d7de/pytest_asyncio-0.25.3-py3-none-any.whl", hash = "sha256:9e89518e0f9bd08928f97a3482fdc4e244df17529460bc038291ccaf8f85c7c3", size = 19467 },
 ]
 
 [[package]]

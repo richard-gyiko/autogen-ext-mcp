@@ -28,7 +28,7 @@ class SseMcpToolAdapter(
     """
 
     component_config_schema = SseMcpToolAdapterConfig
-    component_provider_override = "autogen-ext.tools.mcp.SseMcpToolAdapter"
+    component_provider_override = "autogen_ext_mcp.tools.SseMcpToolAdapter"
 
     def __init__(self, server_params: SseServerParams, tool: Tool) -> None:
         super().__init__(server_params=server_params, tool=tool)

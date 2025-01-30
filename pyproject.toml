@@ -30,20 +30,21 @@ urls.Documentation = "https://github.com/richard-gyiko/autogen-ext-mcp#readme"
 urls.Repository = "https://github.com/richard-gyiko/autogen-ext-mcp.git"
 urls.Bug-Tracker = "https://github.com/richard-gyiko/autogen-ext-mcp/issues"
 dependencies = [
-    "autogen-core>=0.4.2,<0.5",
+    "autogen-core>=0.4.4,<0.5",
     "json-schema-to-pydantic>=0.2.0",
     "mcp>=1.1.2",
 ]
 
 [dependency-groups]
 dev = [
+    "pytest-asyncio>=0.25.3",
     "pytest>=8.3.4",
 ]
 
 [project.optional-dependencies]
 samples = [
-    "autogen-agentchat>=0.4.2,<0.5",
-    "autogen-ext[azure,openai]>=0.4.2,<0.5",
+    "autogen-agentchat>=0.4.4,<0.5",
+    "autogen-ext[azure,openai]>=0.4.4,<0.5",
     "rich>=13.9.4",
     "python-dotenv>=1.0.1",
 ]

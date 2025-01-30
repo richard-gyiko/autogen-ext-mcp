@@ -28,7 +28,7 @@ class StdioMcpToolAdapter(
     """
 
     component_config_schema = StdioMcpToolAdapterConfig
-    component_provider_override = "autogen-ext.tools.mcp.StdioMcpToolAdapter"
+    component_provider_override = "autogen_ext_mcp.tools.StdioMcpToolAdapter"
 
     def __init__(self, server_params: StdioServerParams, tool: Tool) -> None:
         super().__init__(server_params=server_params, tool=tool)
