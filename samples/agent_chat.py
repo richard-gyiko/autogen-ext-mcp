@@ -7,15 +7,18 @@ from autogen_agentchat.ui import Console
 from autogen_core import CancellationToken
 from autogen_ext.models.openai import OpenAIChatCompletionClient
 from dotenv import load_dotenv
-from mcp import StdioServerParameters
 from rich.console import Console as RichConsole
 
-from autogen_ext_mcp.tools import MCPToolAdapter, get_tools_from_mcp_server
+from autogen_ext_mcp.tools import (
+    StdioMcpToolAdapter,
+    StdioServerParams,
+    mcp_server_tools,
+)
 
 # Get desktop path cross-platform
 desktop_path = str(Path.home() / "Desktop")
 
-mcp_server = StdioServerParameters(
+mcp_server = StdioServerParams(
     command="npx.cmd",
     args=[
         "-y",
@@ -25,7 +28,7 @@ mcp_server = StdioServerParameters(
 )
 
 
-def print_tools(tools: List[MCPToolAdapter]) -> None:
+def print_tools(tools: List[StdioMcpToolAdapter]) -> None:
     console = RichConsole()
     console.print("\n[bold blue]📦 Loaded MCP Tools:[/bold blue]")
 
@@ -51,7 +54,7 @@ def print_tools(tools: List[MCPToolAdapter]) -> None:
 
 
 async def main():
-    tools = await get_tools_from_mcp_server(mcp_server)
+    tools = await mcp_server_tools(mcp_server)
     print_tools(tools)
 
     model_client = OpenAIChatCompletionClient(model="gpt-4o-mini", temperature=0)
