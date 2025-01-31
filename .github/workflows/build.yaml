@@ -34,6 +34,7 @@ jobs:
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+          slug: richard-gyiko/autogen-ext-mcp
 
       - name: Build package
         run: uv build
