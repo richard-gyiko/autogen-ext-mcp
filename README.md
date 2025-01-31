@@ -1,6 +1,7 @@
 # AutoGen Extension for MCP Tools
 
 ![PyPI - Version](https://img.shields.io/pypi/v/autogen-ext-mcp)
+[![codecov](https://codecov.io/gh/richard-gyiko/autogen-ext-mcp/graph/badge.svg?token=QDGJDYWLRI)](https://codecov.io/gh/richard-gyiko/autogen-ext-mcp)
 
 This package provides integration between [Microsoft AutoGen](https://microsoft.github.io/autogen/) and the [Model Context Protocol (MCP)](https://modelcontextprotocol.io), enabling AutoGen agents to seamlessly connect with various data sources and tools.
 
