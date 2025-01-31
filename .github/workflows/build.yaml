@@ -27,5 +27,13 @@ jobs:
       - name: Run linters
         run: uvx ruff check
 
+      - name: Run tests
+        run: uv run pytest --cov --cov-report=xml
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+
       - name: Build package
         run: uv build
