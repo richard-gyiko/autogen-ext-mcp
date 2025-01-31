@@ -1,6 +1,7 @@
 # AutoGen Extension for MCP Tools
 
 ![PyPI - Version](https://img.shields.io/pypi/v/autogen-ext-mcp)
+[![codecov](https://codecov.io/gh/richard-gyiko/autogen-ext-mcp/graph/badge.svg?token=QDGJDYWLRI)](https://codecov.io/gh/richard-gyiko/autogen-ext-mcp)
 
 This package provides integration between [Microsoft AutoGen](https://microsoft.github.io/autogen/) and the [Model Context Protocol (MCP)](https://modelcontextprotocol.io), enabling AutoGen agents to seamlessly connect with various data sources and tools.
 
@@ -21,15 +22,14 @@ pip install autogen-ext-mcp
 ## Quick Start
 
 ```python
-from autogen_ext_mcp.tools import get_tools_from_mcp_server
-from mcp import StdioServerParameters
+from autogen_ext_mcp.tools import mcp_server_tools, StdioServerParams
 from pathlib import Path
 
 # Get desktop path cross-platform
 desktop_path = str(Path.home() / "Desktop")
 
 # Connect to FileSystem MCP server
-server_params = StdioServerParameters(
+server_params = StdioServerParams(
     command="npx",
     args=[
         "-y",
@@ -39,7 +39,7 @@ server_params = StdioServerParameters(
 )
 
 # Get tools
-tools = await get_tools_from_mcp_server(server_params)
+tools = await mcp_server_tools(server_params)
 
 # Use tools with AutoGen agents
 # The tools can be passed to any AutoGen agent that supports tool use
