@@ -120,7 +120,7 @@ requires-dist = [
     { name = "autogen-core", specifier = ">=0.4.4,<0.5" },
     { name = "autogen-ext", extras = ["azure", "openai"], marker = "extra == 'samples'", specifier = ">=0.4.4,<0.5" },
     { name = "json-schema-to-pydantic", specifier = ">=0.2.0" },
-    { name = "mcp", specifier = ">=1.1.2" },
+    { name = "mcp", specifier = ">=1.2.1" },
     { name = "python-dotenv", marker = "extra == 'samples'", specifier = ">=1.0.1" },
     { name = "rich", marker = "extra == 'samples'", specifier = ">=13.9.4" },
 ]
@@ -591,7 +591,7 @@ wheels = [
 
 [[package]]
 name = "mcp"
-version = "1.2.0rc1"
+version = "1.2.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "anyio" },
@@ -603,9 +603,9 @@ dependencies = [
     { name = "starlette" },
     { name = "uvicorn" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/3c/ba/42269d2e87e8ed1920364fdc68a8623701ddf8288de148b21ef3f26aa6df/mcp-1.2.0rc1.tar.gz", hash = "sha256:44dda64e7e61c85884cdc0b3686e8a6dfb1a014d10c4bd35914eba2f24306586", size = 99529 }
+sdist = { url = "https://files.pythonhosted.org/packages/fc/30/51e4555826126e3954fa2ab1e934bf74163c5fe05e98f38ca4d0f8abbf63/mcp-1.2.1.tar.gz", hash = "sha256:c9d43dbfe943aa1530e2be8f54b73af3ebfb071243827b4483d421684806cb45", size = 103968 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/5f/d4/3af43558260e2cc7e084a04af41724931d66ae918fd232f5452d89eb2c8f/mcp-1.2.0rc1-py3-none-any.whl", hash = "sha256:4a9621b7625351fceb3cb518142be1f0a0be73db86375b87e7238e99eacbcce5", size = 66234 },
+    { url = "https://files.pythonhosted.org/packages/4c/0d/6770742a84c8aa1d36c0d628896a380584c5759612e66af7446af07d8775/mcp-1.2.1-py3-none-any.whl", hash = "sha256:579bf9c9157850ebb1344f3ca6f7a3021b0123c44c9f089ef577a7062522f0fd", size = 66453 },
 ]
 
 [[package]]

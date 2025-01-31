@@ -32,7 +32,7 @@ urls.Bug-Tracker = "https://github.com/richard-gyiko/autogen-ext-mcp/issues"
 dependencies = [
     "autogen-core>=0.4.4,<0.5",
     "json-schema-to-pydantic>=0.2.0",
-    "mcp>=1.1.2",
+    "mcp>=1.2.1",
 ]
 
 [dependency-groups]
