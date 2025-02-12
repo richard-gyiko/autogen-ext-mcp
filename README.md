@@ -3,6 +3,14 @@
 ![PyPI - Version](https://img.shields.io/pypi/v/autogen-ext-mcp)
 [![codecov](https://codecov.io/gh/richard-gyiko/autogen-ext-mcp/graph/badge.svg?token=QDGJDYWLRI)](https://codecov.io/gh/richard-gyiko/autogen-ext-mcp)
 
+## 🚨 **This repository is now archived** 🚨  
+The functionality of this project has been integrated directly into the official [`autogen-ext`](https://pypi.org/project/autogen-ext/) package and is available from [`version v0.4.6`](https://github.com/microsoft/autogen/releases/tag/python-v0.4.6).  
+You can now use it directly in `autogen-ext` without needing this separate package.
+
+For further updates and improvements, please refer to the official [`autogen`](https://github.com/microsoft/autogen) repository.
+
+# About
+
 This package provides integration between [Microsoft AutoGen](https://microsoft.github.io/autogen/) and the [Model Context Protocol (MCP)](https://modelcontextprotocol.io), enabling AutoGen agents to seamlessly connect with various data sources and tools.
 
 MCP is an open standard that enables secure, two-way connections between AI systems and data sources, replacing fragmented integrations with a single universal protocol. This allows AI assistants to maintain context as they move between different tools and datasets.
